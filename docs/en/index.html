@@ -42,6 +42,7 @@
   "telephone": "+84383854090",
   "address": {
     "@type": "PostalAddress",
+    "addressLocality": "Long Biên, Hà Nội",
     "addressCountry": "VN"
   },
   "sameAs": []
@@ -247,12 +248,22 @@
           <div>
             <h2>Let’s build your digital solution.</h2>
             <p>Contact Synclab to turn your next business idea into a practical digital product.</p>
+            <p class="contact-address"><span>Operating area:</span> Long Bien, Hanoi, Vietnam</p>
           </div>
           <div class="contact-actions">
             <a class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=syncl4p%2Bsupport%40gmail.com" target="_blank" rel="noopener">syncl4p+support@gmail.com</a>
             <a class="btn btn-secondary" href="tel:+84383854090">+84 383 854 090</a>
             <a class="btn btn-secondary" href="https://zalo.me/84383854090" target="_blank" rel="noopener">Zalo</a>
           </div>
+        </div>
+        <div class="contact-map">
+          <iframe
+            title="Map of Long Bien, Hanoi"
+            data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59582.225634042436!2d105.81218971544796!3d21.037122854436067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a96e2e72c51f%3A0x54689ea60eeeee78!2sLong%20Bi%C3%AAn%2C%20Hanoi%2C%20Vietnam!5e0!3m2!1sen!2sbd!4v1722782819327!5m2!1sen!2sbd"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Long%20Bi%C3%AAn%2C%20Hanoi%2C%20Vietnam" target="_blank" rel="noopener">Open Google Maps</a>
         </div>
       </div>
     </section>
@@ -279,5 +290,30 @@
       </div>
     </div>
   </footer>
+  <script>
+  (function () {
+    var map = document.querySelector("[data-map-src]");
+    if (!map) return;
+
+    function loadMap() {
+      if (map.dataset.loaded === "true") return;
+      map.src = map.dataset.mapSrc;
+      map.dataset.loaded = "true";
+    }
+
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        if (entries.some(function (entry) { return entry.isIntersecting; })) {
+          loadMap();
+          observer.disconnect();
+        }
+      }, { rootMargin: "240px" });
+      observer.observe(map);
+      return;
+    }
+
+    window.addEventListener("load", loadMap, { once: true });
+  }());
+  </script>
 </body>
 </html>

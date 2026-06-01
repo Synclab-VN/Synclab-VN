@@ -77,7 +77,11 @@ module.exports = {
   },
   contact: {
     title: "Let’s build your digital solution.",
-    description: "Liên hệ Synclab để bắt đầu chuyển đổi ý tưởng thành sản phẩm số thực tế."
+    description: "Liên hệ Synclab để bắt đầu chuyển đổi ý tưởng thành sản phẩm số thực tế.",
+    addressLabel: "Khu vực hoạt động",
+    address: "Long Biên, Hà Nội, Việt Nam",
+    mapLink: "Mở Google Maps",
+    mapTitle: "Bản đồ khu vực Long Biên, Hà Nội"
   },
   footer: {
     copyright: "© 2026 Synclab. All rights reserved.",

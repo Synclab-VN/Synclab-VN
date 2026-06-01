@@ -77,7 +77,11 @@ module.exports = {
   },
   contact: {
     title: "Let’s build your digital solution.",
-    description: "Contact Synclab to turn your next business idea into a practical digital product."
+    description: "Contact Synclab to turn your next business idea into a practical digital product.",
+    addressLabel: "Operating area",
+    address: "Long Bien, Hanoi, Vietnam",
+    mapLink: "Open Google Maps",
+    mapTitle: "Map of Long Bien, Hanoi"
   },
   footer: {
     copyright: "© 2026 Synclab. All rights reserved.",

@@ -355,11 +355,83 @@ ul {
   color: var(--muted);
 }
 
+.contact-address {
+  margin-top: 12px !important;
+  font-size: 15px;
+}
+
+.contact-address span {
+  color: var(--text);
+  font-weight: 800;
+}
+
 .contact-actions {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.contact-map {
+  position: relative;
+  margin-top: 18px;
+  aspect-ratio: 16 / 7;
+  min-height: 280px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.contact-map::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(7, 17, 31, 0.46), rgba(59, 130, 246, 0.16)),
+    radial-gradient(circle at top right, rgba(34, 197, 94, 0.1), transparent 42%);
+  mix-blend-mode: multiply;
+  transition: opacity 0.25s ease;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  filter: saturate(0.62) contrast(1.08) brightness(0.72);
+  opacity: 0.92;
+  transition: filter 0.25s ease, opacity 0.25s ease;
+}
+
+.contact-map:hover iframe,
+.contact-map:focus-within iframe {
+  filter: saturate(0.8) contrast(1.04) brightness(0.82);
+  opacity: 0.98;
+}
+
+.contact-map:hover::after,
+.contact-map:focus-within::after {
+  opacity: 0.74;
+}
+
+.map-link {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: rgba(7, 17, 31, 0.82);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+  backdrop-filter: blur(12px);
+}
+
+.map-link:hover {
+  background: rgba(59, 130, 246, 0.82);
 }
 
 footer {
@@ -464,6 +536,12 @@ footer {
 
   .contact-actions {
     justify-content: flex-start;
+  }
+
+  .contact-map {
+    aspect-ratio: 4 / 3;
+    min-height: 240px;
+    border-radius: 20px;
   }
 
   .footer-right {

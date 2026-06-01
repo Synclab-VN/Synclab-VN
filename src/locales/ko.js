@@ -77,7 +77,11 @@ module.exports = {
   },
   contact: {
     title: "디지털 솔루션을 함께 만들어 보세요.",
-    description: "Synclab에 문의하시면 비즈니스 아이디어를 실제 운영 가능한 디지털 제품으로 구체화해 드립니다."
+    description: "Synclab에 문의하시면 비즈니스 아이디어를 실제 운영 가능한 디지털 제품으로 구체화해 드립니다.",
+    addressLabel: "운영 지역",
+    address: "베트남 하노이 롱비엔",
+    mapLink: "Google Maps 열기",
+    mapTitle: "하노이 롱비엔 지도"
   },
   footer: {
     copyright: "© 2026 Synclab. All rights reserved.",
