@@ -94,7 +94,7 @@ function renderJsonLd(locale) {
     "@type": "Organization",
     name: "Synclab",
     url: site.baseUrl,
-    logo: `${site.baseUrl}/logo.png`,
+    logo: site.logoImage,
     description: locale.meta.description,
     email: site.email,
     address: {
@@ -139,7 +139,7 @@ function renderHtml(locale) {
 
 ${renderMeta(locale)}
 
-  <link rel="icon" href="${relativeAsset(locale, "favicon.ico")}" />
+  <link rel="icon" type="image/png" href="${relativeAsset(locale, "assets/synclab-logo.png")}" />
   <link rel="stylesheet" href="${relativeAsset(locale, "assets/site.css")}" />
 
   <script type="application/ld+json">
@@ -150,7 +150,7 @@ ${renderJsonLd(locale)}
   <header class="nav" aria-label="Main navigation">
     <div class="container nav-inner">
       <a class="brand" href="#top" aria-label="Synclab Home">
-        <span class="brand-mark">S</span>
+        <img class="brand-logo" src="${relativeAsset(locale, "assets/synclab-logo-nav@2x.png")}" alt="" width="42" height="40" />
         <span>Synclab</span>
       </a>
       <nav class="nav-links" aria-label="Website navigation">
@@ -276,7 +276,9 @@ function writeLocale(locale) {
 
 fs.rmSync(outputRoot, { recursive: true, force: true });
 fs.mkdirSync(outputAssetDir, { recursive: true });
-fs.copyFileSync(path.join(sourceAssetDir, "site.css"), path.join(outputAssetDir, "site.css"));
+for (const asset of fs.readdirSync(sourceAssetDir)) {
+  fs.copyFileSync(path.join(sourceAssetDir, asset), path.join(outputAssetDir, asset));
+}
 
 for (const locale of locales) {
   writeLocale(locale);

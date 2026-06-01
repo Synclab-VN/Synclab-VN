@@ -71,15 +71,13 @@ img {
   flex: 0 0 auto;
 }
 
-.brand-mark {
-  width: 40px;
+.brand-logo {
+  width: 42px;
   height: 40px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-  display: grid;
-  place-items: center;
-  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.35);
-  font-weight: 900;
+  border-radius: 0;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(34, 211, 238, 0.32));
 }
 
 .nav-links {
