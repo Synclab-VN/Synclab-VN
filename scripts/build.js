@@ -49,6 +49,10 @@ function relativeAsset(locale, asset) {
   return `${relativePrefix(locale)}${asset}`;
 }
 
+function gmailComposeHref(email) {
+  return `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+}
+
 function renderLanguageSwitcher(locale) {
   return site.languages
     .map((language) => {
@@ -56,6 +60,18 @@ function renderLanguageSwitcher(locale) {
       return `<a href="${relativeLocalePath(locale, language.path)}" hreflang="${language.code}"${current}>${language.label}</a>`;
     })
     .join("");
+}
+
+function renderFooterContact() {
+  return `<div class="footer-contact" aria-label="Contact links">
+        <a class="footer-contact-link" href="${gmailComposeHref(site.email)}" target="_blank" rel="noopener" aria-label="Email Synclab">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m4.5 7 7.5 6 7.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="footer-contact-link footer-contact-link-text" href="${escapeHtml(site.zaloUrl)}" target="_blank" rel="noopener" aria-label="Contact Synclab on Zalo">Zalo</a>
+        <a class="footer-contact-link" href="tel:${escapeHtml(site.phone)}" aria-label="Call Synclab">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 3.8 9.3 6.5c.6.6.6 1.5.1 2.1l-1 1.2c1.1 2.3 3.7 4.9 6 6l1.2-1c.6-.5 1.5-.5 2.1.1l2.7 2.7c.5.5.6 1.3.2 1.9-.8 1.2-2.2 1.9-3.7 1.6C10.3 20 4 13.7 2.9 7.1 2.6 5.6 3.3 4.2 4.5 3.4c.6-.4 1.4-.3 2.1.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>`;
 }
 
 function renderMeta(locale) {
@@ -97,6 +113,7 @@ function renderJsonLd(locale) {
     logo: site.logoImage,
     description: locale.meta.description,
     email: site.email,
+    telephone: site.phone,
     address: {
       "@type": "PostalAddress",
       addressCountry: "VN"
@@ -163,7 +180,7 @@ ${renderJsonLd(locale)}
         <div class="language-switcher" aria-label="Language selector">
           ${renderLanguageSwitcher(locale)}
         </div>
-        <a class="btn btn-primary" href="mailto:${site.email}">${escapeHtml(locale.nav.cta)}</a>
+        <a class="btn btn-primary" href="${gmailComposeHref(site.email)}" target="_blank" rel="noopener">${escapeHtml(locale.nav.cta)}</a>
       </div>
     </div>
   </header>
@@ -247,7 +264,11 @@ ${renderProcess(locale.process.steps)}
             <h2>${escapeHtml(locale.contact.title)}</h2>
             <p>${escapeHtml(locale.contact.description)}</p>
           </div>
-          <a class="btn btn-primary" href="mailto:${site.email}">${site.email}</a>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="${gmailComposeHref(site.email)}" target="_blank" rel="noopener">${escapeHtml(site.email)}</a>
+            <a class="btn btn-secondary" href="tel:${escapeHtml(site.phone)}">${escapeHtml(site.phoneDisplay)}</a>
+            <a class="btn btn-secondary" href="${escapeHtml(site.zaloUrl)}" target="_blank" rel="noopener">Zalo</a>
+          </div>
         </div>
       </div>
     </section>
@@ -256,10 +277,13 @@ ${renderProcess(locale.process.steps)}
   <footer>
     <div class="container footer-inner">
       <div>${escapeHtml(locale.footer.copyright)}</div>
-      <div class="footer-links">
-        <a href="${relativeAsset(locale, "privacy-policy.html")}">${escapeHtml(locale.footer.privacy)}</a>
-        <a href="${relativeAsset(locale, "terms.html")}">${escapeHtml(locale.footer.terms)}</a>
-        <a href="${relativeAsset(locale, "support.html")}">${escapeHtml(locale.footer.support)}</a>
+      <div class="footer-right">
+        ${renderFooterContact()}
+        <div class="footer-links">
+          <a href="${relativeAsset(locale, "privacy-policy.html")}">${escapeHtml(locale.footer.privacy)}</a>
+          <a href="${relativeAsset(locale, "terms.html")}">${escapeHtml(locale.footer.terms)}</a>
+          <a href="${relativeAsset(locale, "support.html")}">${escapeHtml(locale.footer.support)}</a>
+        </div>
       </div>
     </div>
   </footer>
