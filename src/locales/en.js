@@ -26,6 +26,7 @@ module.exports = {
     services: "Services",
     about: "About",
     process: "Process",
+    companyProfile: "Company Profile",
     contact: "Contact",
     cta: "Start a project"
   },
@@ -35,6 +36,7 @@ module.exports = {
     description: "Synclab helps businesses turn operational needs into reliable digital products, automated workflows, and measurable advertising systems that improve execution and accelerate customer growth.",
     primaryCta: "Talk to us",
     secondaryCta: "Explore services",
+    profileCta: "View Company Profile",
     highlightsLabel: "Synclab service highlights",
     highlights: [
       { iconImage: "assets/app_icon.png", title: "App", text: "Mobile apps, business websites, dashboards, and management software" },
@@ -85,6 +87,11 @@ module.exports = {
       { title: "Maintenance & improvement", text: "Track feedback, optimize performance, and add capabilities as needs evolve." }
     ]
   },
+  profileTeaser: {
+    title: "Looking for our company profile?",
+    description: "Review Synclab's service scope, app development capabilities, technical expertise, working process, and engineering experience.",
+    cta: "View Company Profile"
+  },
   contact: {
     title: "Let’s build your digital solution.",
     description: "Contact Synclab to turn your next business idea into a practical digital product.",
@@ -95,6 +102,7 @@ module.exports = {
   },
   footer: {
     copyright: "© 2026 Synclab. All rights reserved.",
+    companyProfile: "Company Profile",
     privacy: "Privacy Policy",
     terms: "Terms of Service",
     support: "Support"

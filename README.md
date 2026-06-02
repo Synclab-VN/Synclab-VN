@@ -4,9 +4,9 @@ Static multilingual website for Synclab.
 
 ## Languages
 
-- Vietnamese: `/Synclab-VN/`
-- English: `/Synclab-VN/en/`
-- Korean: `/Synclab-VN/ko/`
+- Vietnamese: `/`
+- English: `/en/`
+- Korean: `/ko/`
 
 ## Maintain content
 
@@ -33,12 +33,15 @@ The build writes static HTML to `docs/` for GitHub Pages:
 - `docs/index.html`
 - `docs/en/index.html`
 - `docs/ko/index.html`
+- `docs/company-profile.html`
 - `docs/privacy-policy.html`
 - `docs/support.html`
 - `docs/terms.html`
+- `docs/en/company-profile.html`
 - `docs/en/privacy-policy.html`
 - `docs/en/support.html`
 - `docs/en/terms.html`
+- `docs/ko/company-profile.html`
 - `docs/ko/privacy-policy.html`
 - `docs/ko/support.html`
 - `docs/ko/terms.html`

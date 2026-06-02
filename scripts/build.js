@@ -4,12 +4,14 @@ const {
   locales
 } = require("../src/build/context");
 const { buildIndexPage } = require("../src/build/pages/index");
+const { buildCompanyProfilePage } = require("../src/build/pages/company-profile");
 const { buildPrivacyPolicyPage } = require("../src/build/pages/privacy-policy");
 const { buildSupportPage } = require("../src/build/pages/support");
 const { buildTermsPage } = require("../src/build/pages/terms");
 
 const pageBuilders = [
   buildIndexPage,
+  buildCompanyProfilePage,
   buildPrivacyPolicyPage,
   buildSupportPage,
   buildTermsPage

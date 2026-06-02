@@ -26,6 +26,7 @@ module.exports = {
     services: "Dịch vụ",
     about: "Giới thiệu",
     process: "Quy trình",
+    companyProfile: "Hồ sơ năng lực",
     contact: "Liên hệ",
     cta: "Tư vấn ngay"
   },
@@ -35,6 +36,7 @@ module.exports = {
     description: "Synclab hỗ trợ doanh nghiệp chuyển đổi số, xây dựng ứng dụng, tự động hoá quy trình và triển khai giải pháp quảng cáo số để tăng hiệu quả vận hành và phát triển khách hàng.",
     primaryCta: "Liên hệ tư vấn",
     secondaryCta: "Xem dịch vụ",
+    profileCta: "Xem hồ sơ năng lực",
     highlightsLabel: "Điểm mạnh dịch vụ Synclab",
     highlights: [
       { iconImage: "assets/app_icon.png", title: "Ứng dụng", text: "Ứng dụng di động, website, bảng điều khiển và phần mềm quản lý" },
@@ -85,6 +87,11 @@ module.exports = {
       { title: "Bảo trì & cải tiến", text: "Theo dõi phản hồi, tối ưu hiệu năng và bổ sung tính năng theo nhu cầu mới." }
     ]
   },
+  profileTeaser: {
+    title: "Bạn cần hồ sơ năng lực của Synclab?",
+    description: "Tìm hiểu phạm vi dịch vụ, năng lực phát triển ứng dụng, chuyên môn kỹ thuật, quy trình làm việc và kinh nghiệm triển khai của Synclab.",
+    cta: "Xem hồ sơ năng lực"
+  },
   contact: {
     title: "Cùng xây dựng giải pháp số cho doanh nghiệp của bạn.",
     description: "Liên hệ Synclab để bắt đầu chuyển đổi ý tưởng thành sản phẩm số thực tế.",
@@ -95,6 +102,7 @@ module.exports = {
   },
   footer: {
     copyright: "© 2026 Synclab. Mọi quyền được bảo lưu.",
+    companyProfile: "Hồ sơ năng lực",
     privacy: "Chính sách quyền riêng tư",
     terms: "Điều khoản dịch vụ",
     support: "Hỗ trợ"

@@ -1,6 +1,6 @@
 const path = require("path");
 const { site, paths, writeFile } = require("../context");
-const { escapeHtml, gmailComposeHref, relativeAsset } = require("../html");
+const { escapeHtml, gmailComposeHref, relativeAsset, relativePagePath } = require("../html");
 const { renderShell } = require("../layout");
 
 function renderCards(cards) {
@@ -80,6 +80,7 @@ function renderHomepage(locale) {
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">${escapeHtml(locale.hero.primaryCta)}</a>
             <a class="btn btn-secondary" href="#services">${escapeHtml(locale.hero.secondaryCta)}</a>
+            <a class="btn btn-secondary" href="${relativePagePath(locale, "company-profile.html")}">${escapeHtml(locale.hero.profileCta)}</a>
           </div>
         </div>
 
@@ -136,6 +137,16 @@ ${renderCards(locale.products.cards)}
         <div class="process">
 ${renderProcess(locale.process.steps)}
         </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container profile-teaser">
+        <div>
+          <h2>${escapeHtml(locale.profileTeaser.title)}</h2>
+          <p>${escapeHtml(locale.profileTeaser.description)}</p>
+        </div>
+        <a class="btn btn-secondary" href="${relativePagePath(locale, "company-profile.html")}">${escapeHtml(locale.profileTeaser.cta)}</a>
       </div>
     </section>
 

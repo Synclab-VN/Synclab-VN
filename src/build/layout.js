@@ -95,6 +95,7 @@ function renderHeader(locale, slug = "") {
         <a href="${navPrefix}#services">${escapeHtml(locale.nav.services)}</a>
         <a href="${navPrefix}#about">${escapeHtml(locale.nav.about)}</a>
         <a href="${navPrefix}#process">${escapeHtml(locale.nav.process)}</a>
+        <a href="${relativePagePath(locale, "company-profile.html")}">${escapeHtml(locale.nav.companyProfile)}</a>
         <a href="${navPrefix}#contact">${escapeHtml(locale.nav.contact)}</a>
       </nav>
       <div class="nav-actions">
@@ -114,6 +115,7 @@ function renderFooter(locale) {
       <div class="footer-right">
         ${renderFooterContact(locale)}
         <div class="footer-links">
+          <a href="${relativePagePath(locale, "company-profile.html")}">${escapeHtml(locale.footer.companyProfile)}</a>
           <a href="${relativePagePath(locale, "privacy-policy.html")}">${escapeHtml(locale.footer.privacy)}</a>
           <a href="${relativePagePath(locale, "terms.html")}">${escapeHtml(locale.footer.terms)}</a>
           <a href="${relativePagePath(locale, "support.html")}">${escapeHtml(locale.footer.support)}</a>

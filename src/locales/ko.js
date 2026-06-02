@@ -26,6 +26,7 @@ module.exports = {
     services: "서비스",
     about: "소개",
     process: "프로세스",
+    companyProfile: "회사 소개서",
     contact: "문의",
     cta: "상담 요청"
   },
@@ -35,6 +36,7 @@ module.exports = {
     description: "Synclab은 베트남에서 사업을 운영하는 기업이 업무 요구를 실제로 작동하는 디지털 제품, 자동화된 프로세스, 측정 가능한 광고 시스템으로 전환하도록 지원합니다.",
     primaryCta: "상담하기",
     secondaryCta: "서비스 보기",
+    profileCta: "회사 소개서 보기",
     highlightsLabel: "Synclab 서비스 핵심 영역",
     highlights: [
       { iconImage: "assets/app_icon.png", title: "App", text: "모바일 앱, 비즈니스 웹사이트, 대시보드, 관리 소프트웨어" },
@@ -85,6 +87,11 @@ module.exports = {
       { title: "유지보수 및 개선", text: "피드백, 성능, 새로운 요구를 반영해 제품을 지속적으로 개선합니다." }
     ]
   },
+  profileTeaser: {
+    title: "Synclab 회사 소개서가 필요하신가요?",
+    description: "서비스 범위, 앱 개발 역량, 기술 전문성, 협업 프로세스와 엔지니어링 경험을 한 페이지에서 확인하실 수 있습니다.",
+    cta: "회사 소개서 보기"
+  },
   contact: {
     title: "디지털 솔루션을 함께 만들어 보세요.",
     description: "Synclab에 문의하시면 비즈니스 아이디어를 실제 운영 가능한 디지털 제품으로 구체화해 드립니다.",
@@ -95,6 +102,7 @@ module.exports = {
   },
   footer: {
     copyright: "© 2026 Synclab. All rights reserved.",
+    companyProfile: "회사 소개서",
     privacy: "Privacy Policy",
     terms: "Terms of Service",
     support: "Support"
