@@ -12,10 +12,24 @@ const root = path.resolve(__dirname, "..", "..");
 const outputRoot = path.join(root, "docs");
 const sourceAssetDir = path.join(root, "src", "assets");
 const outputAssetDir = path.join(outputRoot, "assets");
+const preservedOutputFiles = ["CNAME"];
 
 function cleanOutput() {
+  const preservedFiles = preservedOutputFiles
+    .map((file) => {
+      const outputPath = path.join(outputRoot, file);
+      return fs.existsSync(outputPath)
+        ? { file, content: fs.readFileSync(outputPath) }
+        : null;
+    })
+    .filter(Boolean);
+
   fs.rmSync(outputRoot, { recursive: true, force: true });
   fs.mkdirSync(outputAssetDir, { recursive: true });
+
+  for (const preservedFile of preservedFiles) {
+    fs.writeFileSync(path.join(outputRoot, preservedFile.file), preservedFile.content);
+  }
 }
 
 function copyAssets() {

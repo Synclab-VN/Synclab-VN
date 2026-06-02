@@ -37,9 +37,9 @@ module.exports = {
     secondaryCta: "Explore services",
     highlightsLabel: "Synclab service highlights",
     highlights: [
-      { title: "App", text: "Mobile apps, business websites, dashboards, and management software" },
-      { title: "Automation", text: "Workflow automation, reporting systems, and internal operations tools" },
-      { title: "Marketing", text: "Landing pages, tracking setup, Google Ads, and Facebook Ads" }
+      { iconImage: "assets/app_icon.png", title: "App", text: "Mobile apps, business websites, dashboards, and management software" },
+      { iconImage: "assets/automation_icon.png", title: "Automation", text: "Workflow automation, reporting systems, and internal operations tools" },
+      { iconImage: "assets/marketing_icon.png", title: "Marketing", text: "Landing pages, tracking setup, Google Ads, and Facebook Ads" }
     ]
   },
   about: {

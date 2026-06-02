@@ -1,6 +1,6 @@
 const path = require("path");
 const { site, paths, writeFile } = require("../context");
-const { escapeHtml, gmailComposeHref } = require("../html");
+const { escapeHtml, gmailComposeHref, relativeAsset } = require("../html");
 const { renderShell } = require("../layout");
 
 function renderCards(cards) {
@@ -16,6 +16,23 @@ function renderCards(cards) {
           </article>`;
     })
     .join("\n\n");
+}
+
+function renderHeroHighlights(locale) {
+  return locale.hero.highlights
+    .map((highlight) => {
+      const icon = highlight.iconImage
+        ? `<div class="metric-icon"><img src="${relativeAsset(locale, highlight.iconImage)}" alt="" loading="lazy" /></div>`
+        : "";
+
+      return `<div class="metric">${icon}
+              <div>
+                <strong>${escapeHtml(highlight.title)}</strong>
+                <span>${escapeHtml(highlight.text)}</span>
+              </div>
+            </div>`;
+    })
+    .join("\n            ");
 }
 
 function renderProcess(steps) {
@@ -68,10 +85,7 @@ function renderHomepage(locale) {
 
         <aside class="hero-card" aria-label="${escapeHtml(locale.hero.highlightsLabel)}">
           <div class="dashboard">
-            ${locale.hero.highlights.map((highlight) => `<div class="metric">
-              <strong>${escapeHtml(highlight.title)}</strong>
-              <span>${escapeHtml(highlight.text)}</span>
-            </div>`).join("\n            ")}
+            ${renderHeroHighlights(locale)}
           </div>
         </aside>
       </div>

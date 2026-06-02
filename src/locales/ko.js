@@ -37,9 +37,9 @@ module.exports = {
     secondaryCta: "서비스 보기",
     highlightsLabel: "Synclab 서비스 핵심 영역",
     highlights: [
-      { title: "App", text: "모바일 앱, 비즈니스 웹사이트, 대시보드, 관리 소프트웨어" },
-      { title: "Automation", text: "업무 프로세스 자동화, 리포트 자동화, 내부 운영 도구" },
-      { title: "Marketing", text: "랜딩 페이지, 전환 추적, Google Ads, Facebook Ads" }
+      { iconImage: "assets/app_icon.png", title: "App", text: "모바일 앱, 비즈니스 웹사이트, 대시보드, 관리 소프트웨어" },
+      { iconImage: "assets/automation_icon.png", title: "Automation", text: "업무 프로세스 자동화, 리포트 자동화, 내부 운영 도구" },
+      { iconImage: "assets/marketing_icon.png", title: "Marketing", text: "랜딩 페이지, 전환 추적, Google Ads, Facebook Ads" }
     ]
   },
   about: {

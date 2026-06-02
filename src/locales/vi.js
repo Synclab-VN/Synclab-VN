@@ -37,9 +37,9 @@ module.exports = {
     secondaryCta: "Xem dịch vụ",
     highlightsLabel: "Điểm mạnh dịch vụ Synclab",
     highlights: [
-      { title: "Ứng dụng", text: "Ứng dụng di động, website, bảng điều khiển và phần mềm quản lý" },
-      { title: "Tự động hoá", text: "Tự động hoá quy trình, báo cáo và vận hành nội bộ" },
-      { title: "Tiếp thị số", text: "Trang đích, đo lường chuyển đổi, Google Ads, Facebook Ads" }
+      { iconImage: "assets/app_icon.png", title: "Ứng dụng", text: "Ứng dụng di động, website, bảng điều khiển và phần mềm quản lý" },
+      { iconImage: "assets/automation_icon.png", title: "Tự động hoá", text: "Tự động hoá quy trình, báo cáo và vận hành nội bộ" },
+      { iconImage: "assets/marketing_icon.png", title: "Tiếp thị số", text: "Trang đích, đo lường chuyển đổi, Google Ads, Facebook Ads" }
     ]
   },
   about: {
