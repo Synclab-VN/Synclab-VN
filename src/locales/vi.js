@@ -5,12 +5,22 @@ module.exports = {
   path: "/",
   meta: {
     title: "Synclab | Công ty công nghệ, chuyển đổi số & phát triển ứng dụng",
-    description: "Synclab là đối tác công nghệ tại Việt Nam, hỗ trợ doanh nghiệp chuyển đổi số, phát triển website, mobile app, phần mềm quản lý, tự động hoá quy trình và quảng cáo số.",
-    keywords: "Synclab, công ty công nghệ, chuyển đổi số, phát triển ứng dụng, thiết kế website, mobile app, phần mềm quản lý, tự động hoá doanh nghiệp, quảng cáo số, digital marketing",
-    ogTitle: "Synclab | Technology Partner for Digital Growth",
+    description: "Synclab là đối tác công nghệ tại Việt Nam, hỗ trợ doanh nghiệp chuyển đổi số, phát triển website, ứng dụng di động, phần mềm quản lý, tự động hoá quy trình và quảng cáo số.",
+    keywords: "Synclab, công ty công nghệ, chuyển đổi số, phát triển ứng dụng, thiết kế website, ứng dụng di động, phần mềm quản lý, tự động hoá doanh nghiệp, quảng cáo số, tiếp thị số",
+    ogTitle: "Synclab | Đối tác công nghệ cho tăng trưởng số",
     ogDescription: "Synclab hỗ trợ doanh nghiệp chuyển đổi số, xây dựng ứng dụng, tự động hoá quy trình và triển khai quảng cáo số.",
     twitterTitle: "Synclab | Công ty công nghệ & chuyển đổi số",
-    twitterDescription: "Phát triển app, website, phần mềm quản lý, automation tool và giải pháp quảng cáo số cho doanh nghiệp."
+    twitterDescription: "Phát triển ứng dụng, website, phần mềm quản lý, công cụ tự động hoá và giải pháp quảng cáo số cho doanh nghiệp."
+  },
+  a11y: {
+    mainNavigation: "Điều hướng chính",
+    home: "Trang chủ Synclab",
+    websiteNavigation: "Điều hướng website",
+    languageSelector: "Chọn ngôn ngữ",
+    contactLinks: "Liên kết liên hệ",
+    email: "Gửi email cho Synclab",
+    zalo: "Liên hệ Synclab qua Zalo",
+    phone: "Gọi Synclab"
   },
   nav: {
     services: "Dịch vụ",
@@ -21,15 +31,15 @@ module.exports = {
   },
   hero: {
     eyebrow: "Công ty công nghệ & chuyển đổi số",
-    title: "Technology Partner for Digital Growth",
+    title: "Đối tác công nghệ cho tăng trưởng số",
     description: "Synclab hỗ trợ doanh nghiệp chuyển đổi số, xây dựng ứng dụng, tự động hoá quy trình và triển khai giải pháp quảng cáo số để tăng hiệu quả vận hành và phát triển khách hàng.",
     primaryCta: "Liên hệ tư vấn",
     secondaryCta: "Xem dịch vụ",
     highlightsLabel: "Điểm mạnh dịch vụ Synclab",
     highlights: [
-      { title: "App", text: "Mobile app, website, dashboard và phần mềm quản lý" },
-      { title: "Automation", text: "Tự động hoá quy trình, báo cáo và vận hành nội bộ" },
-      { title: "Marketing", text: "Landing page, tracking, Google Ads, Facebook Ads" }
+      { title: "Ứng dụng", text: "Ứng dụng di động, website, bảng điều khiển và phần mềm quản lý" },
+      { title: "Tự động hoá", text: "Tự động hoá quy trình, báo cáo và vận hành nội bộ" },
+      { title: "Tiếp thị số", text: "Trang đích, đo lường chuyển đổi, Google Ads, Facebook Ads" }
     ]
   },
   about: {
@@ -38,29 +48,29 @@ module.exports = {
     cards: [
       { icon: "💡", title: "Hiểu bài toán kinh doanh", text: "Chúng tôi bắt đầu từ mục tiêu vận hành, khách hàng và dữ liệu để đề xuất giải pháp đúng trọng tâm." },
       { icon: "⚙️", title: "Xây dựng sản phẩm bền vững", text: "Ưu tiên hệ thống dễ sử dụng, dễ bảo trì, dễ mở rộng và phù hợp với đội ngũ doanh nghiệp." },
-      { icon: "📈", title: "Tăng trưởng bằng dữ liệu", text: "Kết hợp sản phẩm số, tracking và quảng cáo để tối ưu hiệu quả kinh doanh theo số liệu thực tế." }
+      { icon: "📈", title: "Tăng trưởng bằng dữ liệu", text: "Kết hợp sản phẩm số, đo lường chuyển đổi và quảng cáo để tối ưu hiệu quả kinh doanh theo số liệu thực tế." }
     ]
   },
   services: {
     title: "Dịch vụ của Synclab",
-    description: "Từ chuyển đổi số, phát triển ứng dụng đến automation và quảng cáo số.",
+    description: "Từ chuyển đổi số, phát triển ứng dụng đến tự động hoá và quảng cáo số.",
     cards: [
-      { icon: "🚀", title: "Digital Transformation", text: "Tư vấn và triển khai giải pháp giúp doanh nghiệp số hoá quy trình, giảm thao tác thủ công và quản lý dữ liệu hiệu quả hơn.", items: ["Tư vấn quy trình số hoá", "Thiết kế hệ thống quản lý nội bộ", "Tối ưu workflow vận hành"] },
-      { icon: "📱", title: "App & Software Development", text: "Thiết kế và phát triển website, mobile app, dashboard và phần mềm theo yêu cầu.", items: ["Android/iOS app", "Website doanh nghiệp", "Web dashboard và admin portal"] },
-      { icon: "🤖", title: "Business Automation", text: "Xây dựng công cụ tự động hoá giúp giảm lỗi thủ công và tăng tốc độ xử lý công việc.", items: ["Báo cáo tự động", "Quản lý khách hàng và đơn hàng", "Đồng bộ dữ liệu đa nền tảng"] },
-      { icon: "🎯", title: "Digital Advertising & Marketing Support", text: "Hỗ trợ doanh nghiệp triển khai landing page, tracking và chiến dịch quảng cáo số.", items: ["Google Ads và Facebook Ads", "Landing page bán hàng", "Tracking chuyển đổi và tối ưu dữ liệu"] }
+      { icon: "🚀", title: "Chuyển đổi số", text: "Tư vấn và triển khai giải pháp giúp doanh nghiệp số hoá quy trình, giảm thao tác thủ công và quản lý dữ liệu hiệu quả hơn.", items: ["Tư vấn quy trình số hoá", "Thiết kế hệ thống quản lý nội bộ", "Tối ưu luồng vận hành"] },
+      { icon: "📱", title: "Phát triển ứng dụng & phần mềm", text: "Thiết kế và phát triển website, ứng dụng di động, bảng điều khiển và phần mềm theo yêu cầu.", items: ["Ứng dụng Android/iOS", "Website doanh nghiệp", "Bảng điều khiển web và cổng quản trị"] },
+      { icon: "🤖", title: "Tự động hoá doanh nghiệp", text: "Xây dựng công cụ tự động hoá giúp giảm lỗi thủ công và tăng tốc độ xử lý công việc.", items: ["Báo cáo tự động", "Quản lý khách hàng và đơn hàng", "Đồng bộ dữ liệu đa nền tảng"] },
+      { icon: "🎯", title: "Quảng cáo số & hỗ trợ tiếp thị", text: "Hỗ trợ doanh nghiệp triển khai trang đích, đo lường chuyển đổi và chiến dịch quảng cáo số.", items: ["Google Ads và Facebook Ads", "Trang đích bán hàng", "Đo lường chuyển đổi và tối ưu dữ liệu"] }
     ]
   },
   products: {
-    title: "What we build",
+    title: "Các sản phẩm chúng tôi xây dựng",
     description: "Các nhóm sản phẩm Synclab có thể triển khai cho doanh nghiệp.",
     cards: [
-      { title: "Business Website", text: "Website giới thiệu doanh nghiệp, dịch vụ, sản phẩm và tối ưu SEO cơ bản." },
-      { title: "Sales Landing Page", text: "Landing page phục vụ quảng cáo, thu lead và đo lường hiệu quả chuyển đổi." },
-      { title: "Internal Dashboard", text: "Dashboard quản lý dữ liệu, báo cáo và theo dõi hoạt động kinh doanh." },
-      { title: "Mobile App", text: "Ứng dụng Android/iOS cho khách hàng, nhân viên hoặc quy trình nội bộ." },
-      { title: "Automation Tool", text: "Công cụ tự động hoá báo cáo, nhập liệu, kiểm tra dữ liệu và workflow lặp lại." },
-      { title: "AI-assisted Workflow", text: "Tích hợp AI vào quy trình nội bộ để hỗ trợ phân tích, tổng hợp và tăng năng suất." }
+      { title: "Website doanh nghiệp", text: "Website giới thiệu doanh nghiệp, dịch vụ, sản phẩm và tối ưu SEO cơ bản." },
+      { title: "Trang đích bán hàng", text: "Trang đích phục vụ quảng cáo, thu thập khách hàng tiềm năng và đo lường hiệu quả chuyển đổi." },
+      { title: "Bảng điều khiển nội bộ", text: "Bảng điều khiển quản lý dữ liệu, báo cáo và theo dõi hoạt động kinh doanh." },
+      { title: "Ứng dụng di động", text: "Ứng dụng Android/iOS cho khách hàng, nhân viên hoặc quy trình nội bộ." },
+      { title: "Công cụ tự động hoá", text: "Công cụ tự động hoá báo cáo, nhập liệu, kiểm tra dữ liệu và quy trình lặp lại." },
+      { title: "Quy trình có AI hỗ trợ", text: "Tích hợp AI vào quy trình nội bộ để hỗ trợ phân tích, tổng hợp và tăng năng suất." }
     ]
   },
   process: {
@@ -76,7 +86,7 @@ module.exports = {
     ]
   },
   contact: {
-    title: "Let’s build your digital solution.",
+    title: "Cùng xây dựng giải pháp số cho doanh nghiệp của bạn.",
     description: "Liên hệ Synclab để bắt đầu chuyển đổi ý tưởng thành sản phẩm số thực tế.",
     addressLabel: "Khu vực hoạt động",
     address: "Long Biên, Hà Nội, Việt Nam",
@@ -84,9 +94,9 @@ module.exports = {
     mapTitle: "Bản đồ khu vực Long Biên, Hà Nội"
   },
   footer: {
-    copyright: "© 2026 Synclab. All rights reserved.",
-    privacy: "Privacy Policy",
-    terms: "Terms of Service",
-    support: "Support"
+    copyright: "© 2026 Synclab. Mọi quyền được bảo lưu.",
+    privacy: "Chính sách quyền riêng tư",
+    terms: "Điều khoản dịch vụ",
+    support: "Hỗ trợ"
   }
 };

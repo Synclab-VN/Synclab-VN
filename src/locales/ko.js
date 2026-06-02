@@ -12,6 +12,16 @@ module.exports = {
     twitterTitle: "Synclab | 디지털 전환 및 소프트웨어 개발",
     twitterDescription: "웹사이트, 모바일 앱, 대시보드, 자동화 도구, 디지털 광고 운영을 지원합니다."
   },
+  a11y: {
+    mainNavigation: "기본 내비게이션",
+    home: "Synclab 홈",
+    websiteNavigation: "웹사이트 내비게이션",
+    languageSelector: "언어 선택",
+    contactLinks: "연락처 링크",
+    email: "Synclab에 이메일 보내기",
+    zalo: "Zalo로 Synclab에 연락하기",
+    phone: "Synclab에 전화하기"
+  },
   nav: {
     services: "서비스",
     about: "소개",

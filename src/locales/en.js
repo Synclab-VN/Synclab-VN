@@ -12,6 +12,16 @@ module.exports = {
     twitterTitle: "Synclab | Digital Transformation & Software Development",
     twitterDescription: "Websites, mobile apps, dashboards, automation tools, and digital advertising support for growing businesses."
   },
+  a11y: {
+    mainNavigation: "Main navigation",
+    home: "Synclab Home",
+    websiteNavigation: "Website navigation",
+    languageSelector: "Language selector",
+    contactLinks: "Contact links",
+    email: "Email Synclab",
+    zalo: "Contact Synclab on Zalo",
+    phone: "Call Synclab"
+  },
   nav: {
     services: "Services",
     about: "About",

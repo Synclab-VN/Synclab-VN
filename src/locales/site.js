@@ -2,6 +2,7 @@ module.exports = {
   basePath: "/Synclab-VN",
   baseUrl: "https://synclab-vn.github.io/Synclab-VN",
   email: "syncl4p+support@gmail.com",
+  privacyEmail: "syncl4p+support-privacy@gmail.com",
   primaryEmail: "syncl4p@gmail.com",
   phone: "+84383854090",
   phoneDisplay: "+84 383 854 090",
