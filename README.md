@@ -46,5 +46,8 @@ The build writes static HTML to `docs/` for GitHub Pages:
 - `docs/ko/support.html`
 - `docs/ko/terms.html`
 - `docs/assets/site.css`
+- `docs/robots.txt`
+- `docs/sitemap.xml`
+- `docs/404.html`
 
 Configure GitHub Pages to publish from branch `main` and folder `/docs`.
