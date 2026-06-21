@@ -13,6 +13,12 @@ const outputRoot = path.join(root, "docs");
 const sourceAssetDir = path.join(root, "src", "assets");
 const outputAssetDir = path.join(outputRoot, "assets");
 const preservedOutputFiles = ["CNAME"];
+const sourceOnlyAssets = new Set([
+  "apple-touch-icon.png",
+  "favicon.ico",
+  "synclab-logo-seo.png",
+  "synclab-logo.svg"
+]);
 
 function cleanOutput() {
   const preservedFiles = preservedOutputFiles
@@ -34,6 +40,10 @@ function cleanOutput() {
 
 function copyAssets() {
   for (const asset of fs.readdirSync(sourceAssetDir)) {
+    if (sourceOnlyAssets.has(asset)) {
+      continue;
+    }
+
     fs.copyFileSync(path.join(sourceAssetDir, asset), path.join(outputAssetDir, asset));
   }
 }
@@ -48,7 +58,9 @@ module.exports = {
   locales,
   paths: {
     root,
-    outputRoot
+    outputRoot,
+    sourceAssetDir,
+    outputAssetDir
   },
   cleanOutput,
   copyAssets,
