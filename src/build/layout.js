@@ -134,7 +134,9 @@ function renderShell({ locale, page, body, afterFooter = "" }) {
 
 ${renderMeta(locale, page)}
 
-  <link rel="icon" type="image/png" href="${relativeAsset(locale, "assets/synclab-logo.png")}" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="${relativeAsset(locale, "assets/site.css")}" />
 
   <script type="application/ld+json">
