@@ -8,6 +8,7 @@ const { buildCompanyProfilePage } = require("../src/build/pages/company-profile"
 const { buildPrivacyPolicyPage } = require("../src/build/pages/privacy-policy");
 const { buildSupportPage } = require("../src/build/pages/support");
 const { buildTermsPage } = require("../src/build/pages/terms");
+const { buildStaticSeoFiles } = require("../src/build/pages/static-seo");
 
 const pageBuilders = [
   buildIndexPage,
@@ -28,4 +29,6 @@ for (const locale of locales) {
   }
 }
 
-console.log(`Generated ${generatedPages} pages in docs/.`);
+const generatedStaticFiles = buildStaticSeoFiles();
+
+console.log(`Generated ${generatedPages} pages and ${generatedStaticFiles} SEO files in docs/.`);
