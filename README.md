@@ -1,6 +1,14 @@
 # Synclab VN
 
-Static multilingual website for Synclab.
+Content-driven static website for Synclab.
+
+## Source and Output
+
+- Source: `site/`
+- Build output: `docs/`
+- GitHub Pages: publish from branch `main`, folder `/docs`
+
+Do not edit generated HTML in `docs/` directly unless it is an urgent hotfix. Update content/config in `site/`, then run the build.
 
 ## Languages
 
@@ -8,19 +16,56 @@ Static multilingual website for Synclab.
 - English: `/en/`
 - Korean: `/ko/`
 
-## Maintain content
+Vietnamese is the root language to preserve the current public URL structure.
 
-Do not edit generated HTML pages directly unless it is an urgent hotfix.
+## Content Structure
 
-- Build orchestrator: `scripts/build.js`
-- Shared build helpers: `src/build/`
-- Page builders: `src/build/pages/`
-- Shared site config: `src/locales/site.js`
-- Vietnamese copy: `src/locales/vi.js`
-- English copy: `src/locales/en.js`
-- Korean copy: `src/locales/ko.js`
-- Legal/support page copy: `src/locales/pages/`
-- Shared styles: `src/assets/site.css`
+```text
+site/
+  config/
+    site.json
+    navigation.json
+  content/
+    pages/{vi,en,ko}/
+    blog/{vi,en,ko}/
+    services/{vi,en,ko}/
+  templates/
+  assets/
+```
+
+Pages, blog posts, and service pages are Markdown files with YAML front matter. Required front matter:
+
+```yaml
+title: "Page title"
+description: "Page description"
+lang: "vi"
+translationKey: "shared-page-id"
+slug: "example.html"
+template: "page"
+published: true
+```
+
+Supported templates:
+
+- `home`
+- `company-profile`
+- `legal`
+- `page`
+- `blog`
+- `service`
+
+Use the same `translationKey` across translated versions so the build can generate `hreflang` links.
+
+## Add Content
+
+To add a normal page:
+
+1. Add a Markdown file under `site/content/pages/{lang}/`.
+2. Set required front matter.
+3. Add translated versions with the same `translationKey` when available.
+4. Run `npm run build`.
+
+To add a blog post or service page, use `site/content/blog/{lang}/` or `site/content/services/{lang}/` and set `template: "blog"` or `template: "service"`.
 
 ## Build
 
@@ -28,26 +73,10 @@ Do not edit generated HTML pages directly unless it is an urgent hotfix.
 npm run build
 ```
 
-The build writes static HTML to `docs/` for GitHub Pages:
+The build:
 
-- `docs/index.html`
-- `docs/en/index.html`
-- `docs/ko/index.html`
-- `docs/company-profile.html`
-- `docs/privacy-policy.html`
-- `docs/support.html`
-- `docs/terms.html`
-- `docs/en/company-profile.html`
-- `docs/en/privacy-policy.html`
-- `docs/en/support.html`
-- `docs/en/terms.html`
-- `docs/ko/company-profile.html`
-- `docs/ko/privacy-policy.html`
-- `docs/ko/support.html`
-- `docs/ko/terms.html`
-- `docs/assets/site.css`
-- `docs/robots.txt`
-- `docs/sitemap.xml`
-- `docs/404.html`
-
-Configure GitHub Pages to publish from branch `main` and folder `/docs`.
+- reads Markdown/front matter from `site/content`,
+- renders pages through shared templates,
+- writes static HTML to `docs/`,
+- copies public assets,
+- generates `robots.txt`, `sitemap.xml`, `404.html`, canonical URLs, Open Graph, Twitter meta, and `hreflang`.
