@@ -1,4 +1,4 @@
-const { buildSite } = require("../site/build");
+const { buildSite } = require("../src/build");
 
 const result = buildSite();
 

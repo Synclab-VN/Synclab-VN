@@ -4,11 +4,11 @@ Content-driven static website for Synclab.
 
 ## Source and Output
 
-- Source: `site/`
+- Source: `src/`
 - Build output: `docs/`
 - GitHub Pages: publish from branch `main`, folder `/docs`
 
-Do not edit generated HTML in `docs/` directly unless it is an urgent hotfix. Update content/config in `site/`, then run the build.
+Do not edit generated HTML in `docs/` directly unless it is an urgent hotfix. Update content/config in `src/`, then run the build.
 
 ## Languages
 
@@ -21,7 +21,7 @@ Vietnamese is the root language to preserve the current public URL structure.
 ## Content Structure
 
 ```text
-site/
+src/
   config/
     site.json
     navigation.json
@@ -60,12 +60,12 @@ Use the same `translationKey` across translated versions so the build can genera
 
 To add a normal page:
 
-1. Add a Markdown file under `site/content/pages/{lang}/`.
+1. Add a Markdown file under `src/content/pages/{lang}/`.
 2. Set required front matter.
 3. Add translated versions with the same `translationKey` when available.
 4. Run `npm run build`.
 
-To add a blog post or service page, use `site/content/blog/{lang}/` or `site/content/services/{lang}/` and set `template: "blog"` or `template: "service"`.
+To add a blog post or service page, use `src/content/blog/{lang}/` or `src/content/services/{lang}/` and set `template: "blog"` or `template: "service"`.
 
 ## Build
 
@@ -75,7 +75,7 @@ npm run build
 
 The build:
 
-- reads Markdown/front matter from `site/content`,
+- reads Markdown/front matter from `src/content`,
 - renders pages through shared templates,
 - writes static HTML to `docs/`,
 - copies public assets,

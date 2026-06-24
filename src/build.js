@@ -12,11 +12,11 @@ const { renderServicePage } = require("./templates/service");
 const { absoluteUrl, escapeHtml, outputRelativePath } = require("./templates/html");
 
 const root = path.resolve(__dirname, "..");
-const siteRoot = path.join(root, "site");
+const sourceRoot = path.join(root, "src");
 const outputRoot = path.join(root, "docs");
-const sourceAssetDir = path.join(siteRoot, "assets");
+const sourceAssetDir = path.join(sourceRoot, "assets");
 const outputAssetDir = path.join(outputRoot, "assets");
-const contentRoot = path.join(siteRoot, "content");
+const contentRoot = path.join(sourceRoot, "content");
 const preservedOutputFiles = ["CNAME"];
 const sourceOnlyAssets = new Set([
   "apple-touch-icon.png",
@@ -287,7 +287,7 @@ function readLogoPath() {
   const pathMatch = source.match(/<path\b([\s\S]*?)\/?>/i);
 
   if (!pathMatch) {
-    throw new Error("Could not find logo path in site/assets/synclab-logo.svg");
+    throw new Error("Could not find logo path in src/assets/synclab-logo.svg");
   }
 
   const attributes = pathMatch[1];
@@ -295,7 +295,7 @@ function readLogoPath() {
   const styleMatch = attributes.match(/\sstyle="([^"]+)"/i);
 
   if (!dMatch) {
-    throw new Error("Could not find logo path data in site/assets/synclab-logo.svg");
+    throw new Error("Could not find logo path data in src/assets/synclab-logo.svg");
   }
 
   return {
@@ -334,8 +334,8 @@ function buildBrandAssets() {
 }
 
 function buildSite() {
-  const site = readJson(path.join(siteRoot, "config", "site.json"));
-  const navigation = readJson(path.join(siteRoot, "config", "navigation.json"));
+  const site = readJson(path.join(sourceRoot, "config", "site.json"));
+  const navigation = readJson(path.join(sourceRoot, "config", "navigation.json"));
   const defaultLanguage = site.languages.find((language) => language.path === "/") || site.languages[0];
   const content = loadContent({ site, navigation });
   const context = {
