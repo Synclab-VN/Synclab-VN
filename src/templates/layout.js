@@ -40,7 +40,8 @@ function renderFooterContact(page, context) {
 }
 
 function renderMeta(page, context) {
-  const canonical = absoluteUrl(context.site, page.language, page.slug);
+  const canonical = page.canonical || absoluteUrl(context.site, page.language, page.slug);
+  const ogUrl = page.ogUrl || canonical;
   const translations = context.translations.get(page.translationKey) || new Map([[page.lang, page]]);
   const xDefaultPage = translationFor(context, page, context.defaultLanguage.code) || [...translations.values()][0] || page;
   const alternateLinks = [...translations.values()]
@@ -59,7 +60,7 @@ function renderMeta(page, context) {
 ${alternateLinks}
 
   <meta property="og:type" content="${escapeHtml(page.ogType || "website")}" />
-  <meta property="og:url" content="${canonical}" />
+  <meta property="og:url" content="${escapeHtml(ogUrl)}" />
   <meta property="og:title" content="${escapeHtml(page.ogTitle || page.title)}" />
   <meta property="og:description" content="${escapeHtml(page.ogDescription || page.description)}" />
   <meta property="og:image" content="${context.site.ogImage}" />
@@ -71,8 +72,12 @@ ${alternateLinks}
   <meta name="twitter:image" content="${context.site.ogImage}" />`;
 }
 
-function renderJsonLd(page, context) {
-  const payload = {
+function stringifyJsonLd(payload) {
+  return JSON.stringify(payload, null, 2).replace(/</g, "\\u003c");
+}
+
+function renderJsonLdBlocks(page, context) {
+  const organizationPayload = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Synclab",
@@ -89,7 +94,14 @@ function renderJsonLd(page, context) {
     sameAs: []
   };
 
-  return JSON.stringify(payload, null, 2);
+  const payloads = [organizationPayload];
+  if (page.schema) {
+    payloads.push(page.schema);
+  }
+
+  return payloads
+    .map((payload) => `  <script type="application/ld+json">\n${stringifyJsonLd(payload)}\n  </script>`)
+    .join("\n");
 }
 
 function renderHeader(page, context) {
@@ -153,9 +165,7 @@ ${renderMeta(page, context)}
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="${relativeAsset(page, "assets/site.css")}" />
 
-  <script type="application/ld+json">
-${renderJsonLd(page, context)}
-  </script>
+${renderJsonLdBlocks(page, context)}
 </head>
 <body>
   ${renderHeader(page, context)}

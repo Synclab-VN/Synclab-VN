@@ -67,6 +67,8 @@
         "icon": "🚀",
         "title": "Chuyển đổi số",
         "text": "Tư vấn và triển khai giải pháp giúp doanh nghiệp số hoá quy trình, giảm thao tác thủ công và quản lý dữ liệu hiệu quả hơn.",
+        "href": "/dich-vu-chuyen-doi-so/",
+        "linkText": "Dịch vụ chuyển đổi số",
         "items": [
           "Tư vấn quy trình số hoá",
           "Thiết kế hệ thống quản lý nội bộ",
@@ -180,4 +182,3 @@
   }
 }
 ---
-

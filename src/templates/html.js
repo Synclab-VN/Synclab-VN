@@ -26,7 +26,13 @@ function absoluteUrl(site, language, slug = "") {
 function outputRelativePath(language, slug = "") {
   const normalizedSlug = slug.replace(/^\//, "");
   const base = language.dir ? `${language.dir}/` : "";
-  return normalizedSlug ? `${base}${normalizedSlug}` : `${base}index.html`;
+  if (!normalizedSlug) {
+    return `${base}index.html`;
+  }
+
+  return normalizedSlug.endsWith("/")
+    ? `${base}${normalizedSlug}index.html`
+    : `${base}${normalizedSlug}`;
 }
 
 function relativePath(fromPage, targetLanguage, targetSlug = "") {

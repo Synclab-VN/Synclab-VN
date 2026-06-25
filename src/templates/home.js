@@ -8,9 +8,12 @@ function renderCards(cards) {
       const items = card.items
         ? `\n            <ul>${card.items.map((item) => `\n              <li>${escapeHtml(item)}</li>`).join("")}\n            </ul>`
         : "";
+      const link = card.href
+        ? `\n            <a class="card-link" href="${escapeHtml(card.href)}">${escapeHtml(card.linkText || card.title)}</a>`
+        : "";
       return `          <article class="card">${icon}
             <h3>${escapeHtml(card.title)}</h3>
-            <p>${escapeHtml(card.text)}</p>${items}
+            <p>${escapeHtml(card.text)}</p>${items}${link}
           </article>`;
     })
     .join("\n\n");
