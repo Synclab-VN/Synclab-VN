@@ -65,8 +65,10 @@
     "cards": [
       {
         "icon": "🚀",
-        "title": "Digital Transformation",
+        "title": "디지털 전환",
         "text": "기업의 업무 프로세스를 디지털화하고 수작업을 줄이며, 운영 데이터를 더 명확하게 관리할 수 있도록 돕습니다.",
+        "href": "/ko/digital-transformation-services/",
+        "linkText": "디지털 전환 서비스",
         "items": [
           "업무 프로세스 디지털화 컨설팅",
           "내부 관리 시스템 설계",
@@ -180,4 +182,3 @@
   }
 }
 ---
-

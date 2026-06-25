@@ -67,6 +67,8 @@
         "icon": "🚀",
         "title": "Digital Transformation",
         "text": "We help businesses digitize workflows, reduce manual effort, and manage operational data with clearer systems.",
+        "href": "/en/digital-transformation-services/",
+        "linkText": "Digital transformation services",
         "items": [
           "Workflow digitization consulting",
           "Internal management system design",
@@ -180,4 +182,3 @@
   }
 }
 ---
-
