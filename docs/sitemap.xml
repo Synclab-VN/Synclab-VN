@@ -9,15 +9,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synclab.com.vn/privacy-policy.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synclab.com.vn/support.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synclab.com.vn/terms.html</loc>
+    <loc>https://synclab.com.vn/dich-vu-chuyen-doi-so/</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -26,6 +18,10 @@
   </url>
   <url>
     <loc>https://synclab.com.vn/en/company-profile.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synclab.com.vn/en/digital-transformation-services/</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -49,6 +45,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://synclab.com.vn/ko/digital-transformation-services/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://synclab.com.vn/ko/privacy-policy.html</loc>
     <priority>0.8</priority>
   </url>
@@ -58,6 +58,18 @@
   </url>
   <url>
     <loc>https://synclab.com.vn/ko/terms.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synclab.com.vn/privacy-policy.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synclab.com.vn/support.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synclab.com.vn/terms.html</loc>
     <priority>0.8</priority>
   </url>
 </urlset>

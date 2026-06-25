@@ -1,0 +1,83 @@
+{
+  "vi": {
+    "a11y": {
+      "mainNavigation": "Điều hướng chính",
+      "home": "Trang chủ Synclab",
+      "websiteNavigation": "Điều hướng website",
+      "languageSelector": "Chọn ngôn ngữ",
+      "contactLinks": "Liên kết liên hệ",
+      "email": "Gửi email cho Synclab",
+      "zalo": "Liên hệ Synclab qua Zalo",
+      "phone": "Gọi Synclab"
+    },
+    "nav": {
+      "services": "Dịch vụ",
+      "about": "Giới thiệu",
+      "process": "Quy trình",
+      "companyProfile": "Hồ sơ năng lực",
+      "contact": "Liên hệ",
+      "cta": "Tư vấn ngay"
+    },
+    "footer": {
+      "copyright": "© 2026 Synclab. Mọi quyền được bảo lưu.",
+      "companyProfile": "Hồ sơ năng lực",
+      "privacy": "Chính sách quyền riêng tư",
+      "terms": "Điều khoản dịch vụ",
+      "support": "Hỗ trợ"
+    }
+  },
+  "en": {
+    "a11y": {
+      "mainNavigation": "Main navigation",
+      "home": "Synclab Home",
+      "websiteNavigation": "Website navigation",
+      "languageSelector": "Language selector",
+      "contactLinks": "Contact links",
+      "email": "Email Synclab",
+      "zalo": "Contact Synclab on Zalo",
+      "phone": "Call Synclab"
+    },
+    "nav": {
+      "services": "Services",
+      "about": "About",
+      "process": "Process",
+      "companyProfile": "Company Profile",
+      "contact": "Contact",
+      "cta": "Start a project"
+    },
+    "footer": {
+      "copyright": "© 2026 Synclab. All rights reserved.",
+      "companyProfile": "Company Profile",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "support": "Support"
+    }
+  },
+  "ko": {
+    "a11y": {
+      "mainNavigation": "기본 내비게이션",
+      "home": "Synclab 홈",
+      "websiteNavigation": "웹사이트 내비게이션",
+      "languageSelector": "언어 선택",
+      "contactLinks": "연락처 링크",
+      "email": "Synclab에 이메일 보내기",
+      "zalo": "Zalo로 Synclab에 연락하기",
+      "phone": "Synclab에 전화하기"
+    },
+    "nav": {
+      "services": "서비스",
+      "about": "소개",
+      "process": "프로세스",
+      "companyProfile": "회사 소개서",
+      "contact": "문의",
+      "cta": "상담 요청"
+    },
+    "footer": {
+      "copyright": "© 2026 Synclab. All rights reserved.",
+      "companyProfile": "회사 소개서",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "support": "Support"
+    }
+  }
+}

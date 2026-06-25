@@ -299,6 +299,21 @@ section {
   color: var(--muted);
 }
 
+.card-link {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 16px;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+  color: var(--primary-2);
+}
+
 .icon {
   width: 46px;
   height: 46px;
@@ -500,6 +515,53 @@ ul {
 
 .legal-contact {
   padding-bottom: 40px;
+}
+
+.content-body h1,
+.content-body h2,
+.content-body h3 {
+  margin: 28px 0 12px;
+}
+
+.content-body h1:first-child,
+.content-body h2:first-child,
+.content-body h3:first-child {
+  margin-top: 0;
+}
+
+.content-body p,
+.content-body li {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.content-body a {
+  color: var(--primary);
+}
+
+.content-body ul,
+.content-body ol {
+  padding-left: 22px;
+}
+
+.content-lead {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.content-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 28px;
+}
+
+.content-tags span {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .profile-hero {
