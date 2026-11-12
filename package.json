@@ -3,7 +3,7 @@
     "build": "node scripts/build.js"
   },
   "devDependencies": {
-    "markdown-it": "^14.2.0",
+    "markdown-it": "^14.3.3",
     "yaml": "^2.9.0"
   }
 }

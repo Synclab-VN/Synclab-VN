@@ -14,8 +14,20 @@ function renderLegalBody(html) {
     .join("\n\n");
 }
 
+function resolveContactEmail(contactEmail, site) {
+  if (contactEmail === "privacy") {
+    return site.privacyEmail;
+  }
+
+  if (!contactEmail || contactEmail === "support") {
+    return site.email;
+  }
+
+  return contactEmail;
+}
+
 function renderLegalPage(page, context) {
-  const contactEmail = page.contactEmail === "privacy" ? context.site.privacyEmail : context.site.email;
+  const contactEmail = resolveContactEmail(page.contactEmail, context.site);
   const body = `<main id="top">
     <section class="legal-hero">
       <div class="container">
